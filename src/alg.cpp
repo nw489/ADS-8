@@ -22,13 +22,13 @@ void makeTree(BST<std::string>& tree, const char* filename) {
       }
       word += static_cast<char>(ch);
     } else {
-      if (!word.empty()) {
+      if (word.size() > 1) {
         tree.insert(word);
-        word.clear();
       }
+      word.clear();
     }
   }
-  if (!word.empty()) {
+  if (word.size() > 1) {
     tree.insert(word);
   }
   file.close();
