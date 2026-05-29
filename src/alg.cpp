@@ -33,7 +33,6 @@ void makeTree(BST<std::string>& tree, const char* filename) {
   }
   file.close();
 }
-
 void printFreq(BST<std::string>& tree) {
   int total = tree.size();
   if (total == 0) return;
